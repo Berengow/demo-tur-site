@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Демо-тур</title>
+  <meta name="description" content="Виртуальный тур «Демо-тур», собранный в ORBITA." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="vendor/pannellum/pannellum.css" />
+  <link rel="stylesheet" href="player/fonts.css" />
+  <link rel="stylesheet" href="player/player.css" />
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    window.ORBITA_STANDALONE = true;
+    (function () {
+      var href = location.href.split("#")[0].split("?")[0];
+      if (!/\/[^/]+\.[a-z0-9]+$/i.test(location.pathname) && href.slice(-1) !== "/") href += "/";
+      window.ORBITA_BASE = new URL(".", href).href;
+    })();
+    window.TOUR = {"title":"Демо-тур","mode":"play","activeSceneId":"scn_523f39a24c51","placeKind":null,"selectedHotspotId":null,"theme":{"preset":"coal","accent":"#e29a3a","panel":"#161311","text":"#f6f1ea","point":"#e29a3a","font":"Manrope","radius":16,"opacity":0.78,"blur":18,"pointScale":1,"pointShape":"diamond","uiScale":1.02},"settings":{"soundEnabled":false,"autorotate":false,"autorotateSpeed":-1.6,"gyro":false,"minHfov":50,"maxHfov":120,"carouselPlacement":"bottom","logoPlacement":"top-left","logoText":"ORBITA","aboutTitle":"Как смотреть","aboutBody":"Крутите зал мышью или пальцем. Точки ведут между сценами. Стрелки и карусель переключают залы сразу, без новой страницы.","introTitle":"Демо-тур ORBITA","introSubtitle":"Три зала, точки перехода и карточка. Всё это уедет одним ZIP на любой хостинг.","introButton":"Начать просмотр","northOffset":0},"scenes":[{"id":"scn_dee51cf826b3","name":"Зал","description":"Первый зал. Отсюда тур уходит в галерею и атриум — страница не перезагружается.","image":"panoramas/scn_dee51cf826b3.jpg","yaw":-16,"pitch":0,"hfov":100,"mapX":28,"mapY":64,"modules":{"carousel":true,"logo":true,"about":false,"hotspots":true,"labels":true,"minimap":false,"infoCard":true,"compass":false,"sceneTitle":true,"arrows":true,"fullscreen":true,"loader":true,"intro":true},"hotspots":[{"id":"hs_0c7d9f9c61e5","kind":"scene","yaw":-16,"pitch":2,"title":"В галерею","text":"","targetSceneId":"scn_523f39a24c51","url":""},{"id":"hs_b8e2b5072cec","kind":"scene","yaw":48,"pitch":0,"title":"В атриум","text":"","targetSceneId":"scn_d6c9d1cc6a9c","url":""}]},{"id":"scn_523f39a24c51","name":"Галерея","description":"Вторая сцена. Карусель и стрелки переключают залы без перезагрузки.","image":"panoramas/scn_523f39a24c51.jpg","yaw":-34,"pitch":0,"hfov":100,"mapX":52,"mapY":36,"modules":{"carousel":true,"logo":true,"about":false,"hotspots":true,"labels":true,"minimap":false,"infoCard":true,"compass":false,"sceneTitle":true,"arrows":true,"fullscreen":true,"loader":true,"intro":false},"hotspots":[{"id":"hs_0b1d20587e6e","kind":"scene","yaw":-34,"pitch":2,"title":"Обратно в зал","text":"","targetSceneId":"scn_dee51cf826b3","url":""},{"id":"hs_79a53b8ac8ef","kind":"info","yaw":22,"pitch":0,"title":"О раме","text":"Цветные порталы — это точки перехода. В своём туре на их место встанут дверные проёмы и экспонаты.","targetSceneId":"","url":""}]},{"id":"scn_d6c9d1cc6a9c","name":"Атриум","description":"Свет сверху. Точки на панораме ведут обратно и открывают заметки.","image":"panoramas/scn_d6c9d1cc6a9c.jpg","yaw":6,"pitch":0,"hfov":100,"mapX":74,"mapY":68,"modules":{"carousel":true,"logo":true,"about":false,"hotspots":true,"labels":true,"minimap":false,"infoCard":true,"compass":false,"sceneTitle":true,"arrows":true,"fullscreen":true,"loader":true,"intro":false},"hotspots":[{"id":"hs_b06d02944206","kind":"scene","yaw":6,"pitch":2,"title":"В галерею","text":"","targetSceneId":"scn_523f39a24c51","url":""},{"id":"hs_47349c545669","kind":"info","yaw":-72,"pitch":-2,"title":"Окулус","text":"Поднимите взгляд: кольцо на потолке — зенит. Так выглядит отметка с текстом.","targetSceneId":"","url":""}]},{"id":"scn_875739ae98a6","name":"Белые столы — R0010294","description":"","image":"panoramas/scn_875739ae98a6.jpg","yaw":0,"pitch":0,"hfov":100,"mapX":66,"mapY":30,"modules":{"carousel":true,"logo":true,"about":false,"hotspots":true,"labels":true,"minimap":false,"infoCard":true,"compass":false,"sceneTitle":true,"arrows":true,"fullscreen":true,"loader":true,"intro":false},"hotspots":[]}],"logoUrl":"","audioUrl":"media/audio.wav"};
+  </script>
+  <script src="vendor/pannellum/pannellum.js"></script>
+  <script src="player/player.js"></script>
+</body>
+</html>
